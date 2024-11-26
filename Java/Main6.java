@@ -43,6 +43,7 @@ class ContaCorrente implements ContaBancaria {
     public String getTitular() {
         return titular;
     }
+}
 
     // Classe Principal
     public class Main6 {
@@ -56,4 +57,3 @@ class ContaCorrente implements ContaBancaria {
             conta.depositar(-50); // Tenta depositar um valor negativo
         }
     }
-}
