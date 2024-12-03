@@ -30,7 +30,7 @@ public class GastoCombustivel {
         System.out.printf("Distância percorrida: %.2f %n", distancia);
         System.out.printf("Quantidade de litros utilizada: %.2f %n", litrosUsados);
 
-        scanner.close();7
+        scanner.close();
                
     }
 }
