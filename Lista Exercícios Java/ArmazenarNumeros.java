@@ -7,7 +7,7 @@ public class ArmazenarNumeros {
             Scanner scanner = new Scanner(System.in);
 
             double A = 0;
-            double b = 0;
+            double B = 0;
 
             while(true) {
                 System.out.println(" Digite um núemro (ou 'sair' para encerrar):  ");
@@ -22,15 +22,25 @@ public class ArmazenarNumeros {
 
                     if (numero > 0){
                         A = numero; // armazena em A se for positivo
-                        System.out.print("Número positivo armazenado em A: %.2f \n", A);
+                        System.out.printf("Número positivo armazenado em A: %.2f \n", A);
                     } else if (numero < 0) {
                         B = numero; // armazena em B se for positivo
-                        System.out.print("");
+                        System.out.printf("Número negativo armazenado em B: %.2f \n", B);
+                    } else {
+                        System.out.println("O número é zero e não será armazenado");
                     }
+
+                } catch (NumberFormatException e) {
+                    System.out.println("Entrada Inválida. Por favor, digite um núemro ou 'sair' para encerrar.");
                 }
-                
 
+                // Solicita novamente um novo número para o usuário
+                System.out.println("Digite outro número (ou 'sair' para encerrar): ");
             }
-        }
 
+            System.out.printf("Número positivo final armazenado em A: %.2f \n", A);
+            System.out.printf("Número negativo final armazenado em B: %.2f \n", B);
+
+            scanner.close();
+     }
 }
